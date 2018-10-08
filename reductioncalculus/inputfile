@@ -1,0 +1,72 @@
+# specific entries if needed:
+
+earth_is_flat : T
+flat : E > T
+smart : (E>T) > (E>T)
+came: E>T
+won: E>T
+saw: E>T
+
+# Tests with pronouns:
+
+# 1. simple pronouns: type ?she = Mary, ?him = John
+#and(loves(John,Mary),loves(she,him)) 
+
+# 2. 'recursive' pronouns: type ?her = wife(his); ?his = John
+#loves(John,her) 
+
+# 3. extensional-to-intensional: type ?it = i loves(John,Mary)
+and(loves(John,Mary), knows(he, that it))
+
+# 4. intensional-to-intensional (you get 2 $p's): type ?it = i loves(he,her)
+#and(knows(John, that loves(he,her)),believes(Mary, that it))
+
+# 5. free pronouns: type ?he = he three times
+#and(and(saw(he),came(he)),won(he)) 
+
+
+
+# old examples
+
+#and(loves(John, her),cries(he))
+#and(loves(John,Mary),loves(she,him))
+#loves(P,John) where {P = he}
+#and(loves(he,John),loves(Mary,he))
+#and(flat(earth),knows(John, that it))
+
+
+#echo The smart man loves his wife.
+#loves(the(smart(man)),wife(his))
+
+#echo John knows that he loves his wife.
+#knows(John, that loves(Mary,Jim))
+#dummy(knows(John,that loves(Mary,wife(P))) where {P = John})
+#loves(George,wife(his))
+
+
+### 1. Some simple ones to start with
+
+#John
+#smart(Jim)
+#loves(John,Mary)
+#(lambda j loves(j,j))(John)
+
+### 2. Some slightly longer ones
+
+#echo Every : man danced with his wife.
+#every(man)(lambda u danced(u,wife(u)))
+#echo Every man danced with his wife.
+#every(man)(lambda u danced(u, the(lambda v married(u,v))))
+#every(man)(lambda u (some(woman)(lambda w loves(u,w))))
+
+### 3. Some attitudinal ones
+
+#knows(John,that earth_is_flat)
+#knows(John,that flat(earth))
+#knows(John,that loves(John,wife(John)))
+#knows(John,that knows(John, that believes(Jim, that earth_is_flat)))
+
+### 4. Everything together
+
+#and((lambda u v (and(loves(u,v),honored(u,v))))(John)(Mary),knows(John,that loves(John,wife(John))))
+

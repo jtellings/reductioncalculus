@@ -1,0 +1,41 @@
+# Settings
+
+@maxlinelength 80
+@pronouns he,she,him,her,his,it
+
+# Definitions of constants
+
+# names
+John : E
+Mary : E
+Jim : E
+George : E
+earth : E
+
+# one place predicates
+sings : E > T
+cries: E > T
+
+man : E > T
+woman : E > T
+
+son: E > E
+wife : E > E
+
+# transitive verbs
+loves : E > E > T
+danced: E > E > T
+married : E > E > T
+honored: E > E > T
+
+# attitudinal
+knows :  (E > T) a  # a for attitudinal
+believes: (E > T) a
+
+# quantifiers
+every : (E>T) > (E>T) > T
+some: (E>T) > (E>T) > T
+the : (E>T)>E
+
+# connectives
+and : (T>(T>T))
