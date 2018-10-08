@@ -1,8 +1,8 @@
 # Reduction calculus for <a href="http://dx.doi.org/10.1007/s10988-005-6920-7" target="_blank">Moschovakis (2006)</a>
 
-<a href="http://www.math.ucla.edu/~ynm/" target="_blank">Moschovakis</a> (<a href="http://dx.doi.org/10.1007/s10988-005-6920-7" target="_blank">2006</a>) presents a view of meanings in natural language as abstract algorithms. A reduction calculus is given that reduces a standard LF into an algorithm. This script performs the reduction, which is tedious to do by hand.
+<a href="http://www.math.ucla.edu/~ynm/" target="_blank">Moschovakis</a> (<a href="http://dx.doi.org/10.1007/s10988-005-6920-7" target="_blank">2006</a>) presents a view of meanings in natural language as abstract algorithms. A reduction calculus is given that reduces a standard LF into an algorithm. This script performs the reduction, which is tedious to do by hand. Each reduction step is displayed separately. In addition to the calculus described in the paper, this script also handles intensional anaphora.
 
-Example:
+Example for 'John loves Mary and he knows it':
     <pre>
 **LF 1: and(loves(John, Mary), knows(he, that it))**
 What does 'it' refer to? Type 'i' for intensional.
@@ -34,7 +34,7 @@ _==> (ap)_
         P0 := John,
         P5 := lambda p0 p (John)}
 
-[...]
+[... 5 more steps ...]
 
 _==> (BS)_
 and(P7, P6)
