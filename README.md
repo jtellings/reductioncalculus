@@ -48,4 +48,4 @@ and(P7, P6)
 
 </pre>
 
-See [manual](manual.pdf)
+See [manual](manual.pdf) for more details.
