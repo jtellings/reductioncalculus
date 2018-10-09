@@ -47,3 +47,5 @@ and(P7, P6)
         P5 := lambda p0 p (John)}
 
 </pre>
+
+See [manual](manual.pdf)
